@@ -4,88 +4,88 @@
 
 // console.log(a);
 
-let number = 10;
-console.log(number);
+// let number = 10;
+// console.log(number);
 
-let num = [1,2,3];
-console.log(num[1]);
+// let num = [1,2,3];
+// console.log(num[1]);
 
-const numberConst = 22;
+// const numberConst = 22;
 
-number = 20;
-console.log(number);
+// number = 20;
+// console.log(number);
 
-const obj = {
-    a: 50
-};
+// const obj = {
+//     a: 50
+// };
 
-let obj2 = {
-    Name: 'Mayil',
-    Surname: 'Kerimov',
-    IsMarried: false
-};
+// let obj2 = {
+//     Name: 'Mayil',
+//     Surname: 'Kerimov',
+//     IsMarried: false
+// };
 
-console.log(obj2.IsMarried);
+// console.log(obj2.IsMarried);
 
-console.log(obj);
+// console.log(obj);
 
-obj.a = 20;
-console.log(obj);
+// obj.a = 20;
+// console.log(obj);
 
 // console.log(names);
 // var names = 'Mayil'; 
 // var hoisting
-let surname = 'Zeynalov';
-{
-    var sur = 'Kerimov';
-    surname = sur;
-}
+// let surname = 'Zeynalov';
+// {
+//     var sur = 'Kerimov';
+//     surname = sur;
+// }
 
-console.log(sur);
-console.log(surname);
+// console.log(sur);
+// console.log(surname);
 
 // {
 //     let surs = 'Kerimov';
 // }
 // console.log(surs);
 
-let storeDescription = {
-    budget:10000,
-    employees:['Kerumov','Sadikhan','Aliyev'],
-     products : {
-        xleb:4,
-        lod:10
-    },
-    open:true
-};
+// let storeDescription = {
+//     budget:10000,
+//     employees:['Kerumov','Sadikhan','Aliyev'],
+//      products : {
+//         xleb:4,
+//         lod:10
+//     },
+//     open:true
+// };
 
-console.log(storeDescription.employees[1]);
-
-
-let objnew = {
-    '1': 'Kerimov',
-    b: 3,
-    c: 1,
-    2:'Hello'
-
-};
-
-objnew.a = "Load";
-
-objnew[5] = 'Mayil';
+// console.log(storeDescription.employees[1]);
 
 
+// let objnew = {
+//     '1': 'Kerimov',
+//     b: 3,
+//     c: 1,
+//     2:'Hello'
 
-console.log(objnew);
-console.log(objnew.a);
-// console.log(objnew['b']);
-// Better dot notation
-console.log(objnew[1]);
-console.log(objnew[2]);
+// };
 
-const syb = Symbol("Id");
+// objnew.a = "Load";
 
-console.log(syb.toString());
+// objnew[5] = 'Mayil';
+
+
+
+// console.log(objnew);
+// console.log(objnew.a);
+// // console.log(objnew['b']);
+// // Better dot notation
+// console.log(objnew[1]);
+// console.log(objnew[2]);
+
+// const syb = Symbol("Id");
+
+// console.log(syb.toString());
 
 // const result = confirm("Are you here?");
 
@@ -106,7 +106,7 @@ console.log(syb.toString());
 // document.write(answers);
 // document.close();
 
-let nums = 1;
+// let nums = 1;
 
-console.log(nums++);
-console.log(nums);
+// console.log(nums++);
+// console.log(nums);
