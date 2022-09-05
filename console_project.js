@@ -27,4 +27,6 @@ const a = prompt("Один из последних фильмов который
       console.log(personalMovieDB);
 
 
+      const randomNum = 50;
 
+      (randomNum === 50) ?  console.log("OK") : console.log("Nope");
