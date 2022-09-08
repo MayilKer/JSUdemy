@@ -292,3 +292,58 @@ console.log(arrayOfNumbers);
     }
 
     console.log(resulT);
+
+
+    const lines = 5;
+    let resulte = '';
+
+    for(let i = 0; i <= lines; i++){
+      for(let k = 0; k < lines-i; k++){
+        resulte+=" ";
+      }
+      for(let j = 0; j < i*2+1; j++){
+        resulte += '*';
+      }
+      
+      
+      resulte += '\n';
+    }
+
+    console.log(resulte);
+
+    const logger = (a,b) => a + b;
+
+    console.log(logger(1,2));
+
+
+    function sayHello(name) {
+      return `Привет,${name}`;
+    }
+
+    console.log(sayHello("mayil"));
+
+    function returnNeighboringNumbers(num) {
+      return [num-1,num,num+1];
+    }
+
+    console.log(returnNeighboringNumbers(5));
+
+    
+    function getMathResult(num1, num2) {
+      if(typeof(num2) !== 'number' || num2 <= 0){
+        return num1;
+      }
+      let full = '';
+        for(let i = 1; i <= num2; i++){
+          if(i !== num2){
+            full += `${num1*i}---`;
+          }else{
+            full += `${num1*i}`;
+          }
+  
+        }
+
+      return full;
+    }
+
+    console.log(getMathResult(5,3));
