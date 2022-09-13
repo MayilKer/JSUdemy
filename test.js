@@ -1,5 +1,14 @@
 "use strict";
 
+
+let numbersas = 10;
+
+const foosas = n =>{
+  n*=10;
+  console.log(n);
+};
+
+console.log(numbersas);
 // a = 5;
 
 // console.log(a);
@@ -347,3 +356,231 @@ console.log(arrayOfNumbers);
     }
 
     console.log(getMathResult(5,3));
+
+    console.log(x);
+
+    var x = 4;
+
+
+    const fruit = 'some fruit';
+
+    console.log(fruit.indexOf('ruit'));
+    console.log(fruit.slice(2,5));
+    console.log(fruit.slice(-4,-1));
+
+
+    
+    var showName = function(){
+      console.log("Mayil");
+    };
+    showName();
+   
+
+    showName();
+
+    function showName(){
+      console.log('Mayil');
+    }
+
+    function calculateVolumeAndArea(cube) {
+      if(cube === null || isNaN(cube) || cube <= 0 || !Number.isInteger(cube)){
+        return 'При вычислении произошла ошибка';
+      }
+      return `Объем куба:${Math.pow(cube,3)}, площадь всей поверхности:${6*Math.pow(cube,2)}`;
+    }
+
+    console.log(calculateVolumeAndArea(15));
+
+    function getCoupeNumber(seat) {
+      if(!Number.isInteger(seat) || seat < 0 || typeof(seat) !== 'number'){
+        return 'Ошибка. Проверьте правильность введенного номера места';
+      }
+      else if(seat > 36 || seat === 0){
+        return 'Таких мест в вагоне не существует';
+      }
+      return Math.ceil(seat/4);
+    }
+
+    console.log(getCoupeNumber(37));
+
+    function getTimeFromMinutes(minutes) {
+      if(typeof(minutes) !== 'number' || !Number.isInteger(minutes) || minutes < 0){
+        return 'Ошибка, проверьте данные';
+      }
+      let minute = 0;
+      let hours = 0;
+      let firstCheck = true;
+      let secondCheck = true;
+      hours = minutes / 60;
+      minute = minutes % 60;
+      if(Math.floor(hours) >= 2 && Math.floor(hours) <= 4){
+        firstCheck = false;
+      }
+      if(Math.floor(hours) === 0 || hours > 5){
+        secondCheck = false;
+        firstCheck = false;
+      }
+      return `Это ${Math.floor(hours)} ${firstCheck ? 'час' : secondCheck ? 'часа' : 'часов'} и ${minute} минут`;
+    }
+
+    console.log(getTimeFromMinutes(670));
+
+    function findMaxNumber(num1,num2,num3,num4) {
+      if(
+      typeof(num1) !== 'number' || 
+      typeof(num2) !== 'number' || 
+      typeof(num3) !== 'number' || 
+      typeof(num4) !== 'number'){
+        return 0;
+      }
+      return Math.max(num1,num2,num3,num4);
+    }
+
+    console.log(findMaxNumber(1,2767,5));
+
+    console.log(Math.max(1,2333,34));
+
+
+    function findTime(minutesTotal){
+      let hours = Math.floor(minutesTotal / 60);
+      let minute = minutesTotal % 60;
+      let str = '';
+      switch(hours){
+        case 0:
+          str = 'часов';
+          break;
+        case 1:
+          str = 'час';
+          break;
+        case 2:
+        case 3:
+        case 4:
+          str = 'часа';
+          break;
+        default:
+          str = 'часов';
+      }
+      return `Это ${hours} ${str} и ${minute} минут`;
+    }
+
+    console.log(findTime(12020));
+
+    function fib(n) {
+      let a = 1;
+      let b = 1;
+      let str = '0 1';
+      for (let i = 3; i <= n; i++) {
+        let c = a + b;
+        a = b;
+        b = c;
+
+        str+=' ' + a;
+      }
+      return str;
+    }
+
+    console.log(fib(5));
+
+    function fib(n) {
+      if (typeof(n) !== 'number' || n <= 0 || !Number.isInteger(n)) {
+        return "";
+    }
+      let str = '';
+      let a = 0;
+      let b = 1;
+      for(let i = 0; i < n; i++){
+        if(i+1 === n){
+          str+= `${a}`;
+        }else{
+          str+= `${a} `;
+        }
+        let c = a + b;
+        a = b;
+        b = c;
+      }
+      return str;
+    }
+
+    console.log(fib(1));
+
+    console.log(typeof(String));
+
+    function first(){
+      setTimeout(function(){
+        console.log("Hello");
+      },500);
+    }
+
+    function second(){
+      console.log("Second");
+    }
+
+    first();
+    second();
+
+    function Call(lang,callback){
+      console.log(`I am ${lang} function`);
+      callback();
+    }
+
+    Call('regular',function(){
+      console.log('I am callback function');
+    });
+
+    let options = {
+      height : 1000,
+      name : 'letssa'
+    };
+
+    console.log(typeof(''+1+0));
+
+    options.up = function(){
+      this.height +=1;
+    };
+
+    console.log(options.height);
+    options.up();
+
+    delete options.name;
+    console.log(options.name);
+
+    console.log(Math.floor(-5.2));
+
+    var text = 'login';
+    console.log(text.charAt(2));
+    var num = 1.126334;
+
+    console.log(num.toFixed());
+
+    var arr = [5,6,7,8,9,10,11,12];
+
+    console.log(arr.some(a=>a>10 & a%2===0));
+
+
+    console.log(Math.round(2.6663244));
+
+    let funccas = function(){
+      console.log('hello');
+    } ;
+    funccas();
+
+    function hasil(){
+      let result = 1;
+
+      for(let i = 11; i < 15; i++){
+        result*=i;
+      }
+      return result;
+    }
+
+    console.log(hasil());
+
+    
+    function Calculate(){
+
+      let one = document.getElementById('onein').value;
+      let seconds = document.getElementById('secondin').value;
+      alert(one*seconds);
+    }
+
+
