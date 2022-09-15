@@ -131,8 +131,17 @@ console.log(isAdmin);
 let salaries = {
     "John": 100,
     "Pete": 300,
-    "Mary": 250
+    "Mary": 250,
+    log : {
+        a:2
+    }
   };
+
+  let ass = {};
+
+  Object.assign(ass,salaries);
+  ass.log.a = 10;
+  console.log(ass.log.a);
 
   function topSalary(obje){
     let max = 0;
@@ -176,6 +185,81 @@ let salaries = {
             console.log(`${i},${obtest[key][i]}`);
     }
   }
+
+
+  let original = {
+    a:2,
+    b:3,
+    c:{
+        d:12,
+        l:10
+    }
+  };
+
+  for(let key in original){
+    console.log(original[key]);
+  }
+
+  function clone(obj){
+    let copyObj = {};
+    let key;
+    for(key in obj){
+        copyObj[key] = obj[key];
+    }
+    return copyObj;
+  }
+
+  let newobj = clone(original);
+
+  newobj.a = 177;
+
+  console.log(original.a);
+  console.log(newobj.a);
+
+  let copyArr = [1,2,3,4,5];
+
+  let newArr = copyArr.splice();
+
+  const arr1 = [1,2,3,4,5],
+        arr3 = [6,7,8,9,10];
+        
+const interneet = [...arr1,...arr3];
+console.log(interneet);
+  
+
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+    let str = '';
+    arr.length === 0 ? str = 'Семья пуста' : str = 'Семья состоит из: ';
+    arr.forEach(member => {
+        str += `${member} `;
+    });
+    return str;
+}
+
+console.log(showFamily(family));
+
+
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+    arr.forEach(city => {
+        console.log(city.toLowerCase());
+    });
+}
+
+console.log(standardizeStrings(favoriteCities));
+
+const someString = 'This is some strange string';
+
+function reverse(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverse(someString));
+
 
 
 

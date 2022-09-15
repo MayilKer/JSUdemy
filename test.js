@@ -610,7 +610,8 @@ console.log(arrayOfNumbers);
 
   
 
-  console.log(str.split(' ').splice(','));
+  console.log(str.split(' '));
+
 
   
 
