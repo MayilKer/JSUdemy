@@ -93,6 +93,11 @@ const object1 = {
     }
 };
 
+let {js,php,c:aaa = 199} = personalPlanPeter.skills.programmingLangs;
+
+console.log(aaa);
+
+
 console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
 
 function showProgrammingLangs(plan) {

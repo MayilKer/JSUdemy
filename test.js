@@ -463,7 +463,7 @@ console.log(arrayOfNumbers);
       return `Это ${hours} ${str} и ${minute} минут`;
     }
 
-    console.log(findTime(12020));
+    console.log(findTime(120320));
 
     function fib(n) {
       let a = 1;
@@ -583,4 +583,34 @@ console.log(arrayOfNumbers);
       alert(one*seconds);
     }
 
+
+    function GetHoursAndMinute(minutes){
+      let hour = Math.floor(minutes/60);
+      return hour;
+    }
+
+  console.log(GetHoursAndMinute(130));
+
+  var el =  document.getElementById('childs');
+
+  console.log(el.parentElement);
+
+  const para = document.createElement("input");
+
+  para.setAttribute('placeholder', 'Enter Something');
+  para.setAttribute('class', 'Enter');
+  para.setAttribute('class', 'No d-block');
+
+  el.parentElement.appendChild(para);
+
+
+  console.log(undefined || null);
+
+  let str = 'mayil nurlan';
+
+  
+
+  console.log(str.split(' ').splice(','));
+
+  
 
