@@ -148,5 +148,21 @@ let salaries = {
 
   console.log(topSalary(salaries));
 
+  let arr2 = [2,5,1,3,31,41,32,11];
+  
+
+  function sorting(a,b){
+    return a - b;
+  }
+
+  arr2.sort(sorting);
+
+  console.log(arr2);
+
+  for(let i in arr2){
+    console.log(`${i}: ${arr2[i]}`);
+  }
+
+
 
 
