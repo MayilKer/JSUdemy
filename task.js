@@ -163,6 +163,20 @@ let salaries = {
     console.log(`${i}: ${arr2[i]}`);
   }
 
+  let obtest = {
+    a:3,
+    led : {
+        solid : 500,
+        leko : 100
+    }
+  };
+
+  for(let key in obtest){
+        for(let i in obtest[key]){
+            console.log(`${i},${obtest[key][i]}`);
+    }
+  }
+
 
 
 
