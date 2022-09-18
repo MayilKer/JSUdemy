@@ -220,10 +220,15 @@ let salaries = {
 
   let newArr = copyArr.splice();
 
+  newArr[1] = 5;
+
+  console.log(copyArr);
+
   const arr1 = [1,2,3,4,5],
         arr3 = [6,7,8,9,10];
         
 const interneet = [...arr1,...arr3];
+
 console.log(interneet);
   
 
@@ -259,6 +264,83 @@ function reverse(str) {
 }
 
 console.log(reverse(someString));
+
+
+var a = 5;
+
+var ba = a;
+
+ba = a + 5;
+
+let obj = {
+  a:5,
+  b:6
+};
+
+
+let copyObj = {};
+
+Object.assign(copyObj,obj);
+
+copyObj.a = 12;
+
+
+console.log(obj.a);
+
+
+let arr10 = [1,2,3,4,5];
+
+let copyArrr = arr10.splice();
+
+copyArrr[1] = 11;
+
+console.log(arr10);
+
+
+var f = function() {
+
+  console.log(1);
+
+}
+
+var execute = function(f) {
+
+  setTimeout(f, 1000);
+
+}
+
+execute(f); // что выведет в консоль и почему
+
+f = function() {
+
+  console.log(2);
+
+}
+
+
+console.log(isNaN({}));
+console.log(Number.isNaN({}));
+
+
+function Check(){
+  for(let i = 0; i < 10; i++){
+    i*=i;
+  }
+  console.log(i);
+}
+
+
+
+Check();
+
+
+
+
+
+
+
+
+
 
 
 
