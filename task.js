@@ -279,6 +279,8 @@ function availableCurr(arr, missingCurr) {
   return str;
 }
 
+console.log(availableCurr([...baseCurrencies,...additionalCurrencies]));
+
 var a = 5;
 
 var ba = a;
@@ -314,13 +316,13 @@ var f = function() {
 
   console.log(1);
 
-}
+};
 
 var execute = function(f) {
 
   setTimeout(f, 1000);
 
-}
+};
 
 execute(f); // что выведет в консоль и почему
 
@@ -328,7 +330,7 @@ f = function() {
 
   console.log(2);
 
-}
+};
 
 
 console.log(isNaN({}));
@@ -336,7 +338,7 @@ console.log(Number.isNaN({}));
 
 
 function Check(){
-  for(let i = 0; i < 10; i++){
+  for(var i = 0; i < 10; i++){
     i*=i;
   }
   console.log(i);
@@ -346,17 +348,79 @@ function Check(){
 
 Check();
 
+const shoppingMallData = {
+  shops: [
+      {
+          width: 10,
+          length: 5
+      },
+      {
+          width: 15,
+          length: 7
+      },
+      {
+          width: 20,
+          length: 5
+      },
+      {
+          width: 8,
+          length: 10
+      }
+  ],
+  height: 5,
+  moneyPer1m3: 30,
+  budget: 50000
+};
+
+function isBudgetEnough(data) {
+  let fullCube = 0;
+
+  //Variant I
+  for(let item of data.shops){
+    fullCube += item.width * item.length * data.height * data.moneyPer1m3;
+  }
+
+
+  // Variant II
+  // data.shops.forEach(shop => {
+  //   fullCube += shop.width * shop.length * data.height * data.moneyPer1m3;
+  // });
+
+  
+
+  if(fullCube < data.budget){
+    return 'Бюджета достаточно';
+  }else{
+    return 'Бюджета недостаточно';
+  }
+}
+
+console.log(isBudgetEnough(shoppingMallData));
+
+
+let x = 1;
+
+console.log(x++);
 
 
 
+function foo(a,b) {
+  const [name= [first]] = a;
+  const {eng} = b;
+
+  return `${first} ${eng}`;
+}
+
+const result = foo({name: ['Hello', 'Привет']}, {ru: 'Мир', eng: 'World'});
+
+console.log(result);
 
 
+const asd = {
+  names : ['dasda','asdas']
+};
 
+let {names : [first]} = asd;
 
-
-
-
-
-console.log(availableCurr([...baseCurrencies,...additionalCurrencies]));
-
-
+console.log(first);
+A
