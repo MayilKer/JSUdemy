@@ -423,3 +423,43 @@ const asd = {
 let {names : [first]} = asd;
 
 console.log(first);
+
+
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard','Takesi'];
+
+
+function sortStudentsByGroups(arr) {
+  arr.sort();
+  let commands = [];
+  let command = [];
+  let ostatok = 'Оставшиеся студенты:';
+  for(let i = 0; i < arr.length; i++){
+
+    command.push(arr[i]);
+    
+    if(command.length === 3){
+      commands.push(command);
+      command = [];
+    }
+  }
+
+  if(command.length === 0){
+    ostatok += " -";
+    commands.push(ostatok);
+  }else{
+    command.forEach((element,index) => {
+      if(index != command.length - 1){
+        ostatok += ` ${element},`;
+      }else{
+        ostatok += ` ${element}`;
+      }
+  });
+
+  commands.push(ostatok);
+  }
+  return commands;
+}
+
+console.log(sortStudentsByGroups(students));
+
+console.log(students.sort());
