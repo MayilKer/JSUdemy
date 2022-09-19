@@ -423,4 +423,3 @@ const asd = {
 let {names : [first]} = asd;
 
 console.log(first);
-A
