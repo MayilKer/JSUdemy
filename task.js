@@ -425,14 +425,14 @@ let {names : [first]} = asd;
 console.log(first);
 
 
-const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard','Takesi'];
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard','Takesi','Takesi','Takesi'];
 
 
 function sortStudentsByGroups(arr) {
   arr.sort();
   let commands = [];
   let command = [];
-  let ostatok = 'Оставшиеся студенты:';
+  let ostatok = 'Оставшиеся студенты: ';
   for(let i = 0; i < arr.length; i++){
 
     command.push(arr[i]);
@@ -443,20 +443,23 @@ function sortStudentsByGroups(arr) {
     }
   }
 
-  if(command.length === 0){
-    ostatok += " -";
-    commands.push(ostatok);
-  }else{
-    command.forEach((element,index) => {
-      if(index != command.length - 1){
-        ostatok += ` ${element},`;
-      }else{
-        ostatok += ` ${element}`;
-      }
-  });
-
+  ostatok += command.length === 0 ? ` -` : command.join(', ');
   commands.push(ostatok);
-  }
+
+  // if(command.length === 0){
+  //   ostatok += " -";
+  //   commands.push(ostatok);
+  // }else{
+  //   command.forEach((element,index) => {
+  //     if(index != command.length - 1){
+  //       ostatok += ` ${element},`;
+  //     }else{
+  //       ostatok += ` ${element}`;
+  //     }
+  // });
+
+  // commands.push(ostatok);
+  // }
   return commands;
 }
 
