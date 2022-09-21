@@ -463,3 +463,48 @@ function sortStudentsByGroups(arr) {
 console.log(sortStudentsByGroups(students));
 
 console.log(students.sort());
+
+
+let func = function(){
+  console.log('Hello');
+};
+
+func();
+
+
+let number = 10;
+
+const foos = n => {
+  n*=10;
+  console.log(n);
+};
+
+console.log(n);
+
+const teach = 'sad';
+
+console.log(2 + 2 + '5');
+
+let man = 10;
+
+function Toplam(){
+  let man = 10;
+}
+
+
+
+console.log(man);
+
+let num = 2;
+
+
+console.log(typeof(num));
+
+console.log(isNaN('0'));
+
+for(let i = 0; i <=10;i+=2){
+  console.log(i);
+}
+
+console.log(isNaN(NaN));
+
