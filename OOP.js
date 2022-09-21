@@ -65,3 +65,26 @@ let t2 = increment();
 let t3 = increment();
 
 console.log(t1,t2,t3);
+
+function Sum(a){
+    return function(b){
+        return a + b;
+    };
+}
+
+console.log(Sum(10)(5));
+console.log(Sum(4)(1));
+console.log(Sum(5)(-7));
+
+let vals = 7;
+ function createAdder() {
+   function addNumbers(a, b) {
+     vals = a + b;
+     return vals;
+   }
+   return addNumbers;
+}
+let adder = createAdder();
+let sum = adder(vals, 8);
+console.log('example of function returning a function: ', sum);
+console.log(adder(vals, 8));
