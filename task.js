@@ -141,7 +141,9 @@ let salaries = {
 
   Object.assign(ass,salaries);
   ass.log.a = 10;
-  console.log(ass.log.a);
+  ass.Mary = 'hell';
+  console.log(ass.Mary);
+  console.log(salaries.Mary);
 
   function topSalary(obje){
     let max = 0;
