@@ -24,3 +24,6 @@ console.log(buttonColl);
 console.log(navNode);
 console.log(boxNode);
 console.log(divNode);
+
+nav.style.backgroundColor = 'green';
+boxColl[0].style.cssText = 'color: red; width: 200px; background-color: grey;';
