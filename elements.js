@@ -12,7 +12,6 @@ const hearts = document.querySelectorAll('.heart');
 
 
 
-
 boxes.forEach(a => {
     console.log(a);
 });
@@ -70,3 +69,35 @@ sibling.textContent = 'Hello Mayil';
 sibling.innerHTML = '<p>How are you?</p>';
 
 sibling.insertAdjacentHTML('beforeend','<h2>Olaaa</h2>');
+
+const btn = document.querySelectorAll('button');
+const eventCreate = document.getElementById('eve'),
+      overlay = document.querySelector('.overlay');
+
+btn[0].addEventListener('click', () => {
+    setTimeout(function(){
+        alert('Hello');
+    },2000);
+});
+
+btn[0].addEventListener('click', () =>{
+    console.log("Hello World");
+});
+
+let counter = 0;
+
+const eventDelete = (e) => {
+    console.log(e.currentTarget);
+    console.log(e.type);
+    // counter++;
+    // if(counter == 1){
+    //     eventCreate.removeEventListener('click', eventDelete);
+    // }
+};
+
+eventCreate.addEventListener('click', eventDelete);
+overlay.addEventListener('click', eventDelete);
+
+btn.forEach( btn => {
+    btn.addEventListener('click', eventDelete, {once: true});
+});
