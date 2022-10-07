@@ -24,3 +24,12 @@ console.log(buttonColl);
 console.log(navNode);
 console.log(boxNode);
 console.log(divNode);
+
+const div = document.createElement('div');
+
+div.style.backgroundColor = 'black';
+
+document.body.append(div);
+
+
+
