@@ -26,16 +26,6 @@ console.log(navNode);
 console.log(boxNode);
 console.log(divNode);
 
-<<<<<<< HEAD
-const div = document.createElement('div');
-
-div.style.backgroundColor = 'black';
-
-document.body.append(div);
-
-
-
-=======
 nav.style.backgroundColor = 'green';
 boxColl[0].style.cssText = 'color: red; width: 200px; background-color: grey;';
 
@@ -111,4 +101,3 @@ overlay.addEventListener('click', eventDelete);
 btn.forEach( btn => {
     btn.addEventListener('click', eventDelete, {once: true});
 });
->>>>>>> 6b4c0ac41fd1e2c3c598a965aee1ff8eaad38fd0
