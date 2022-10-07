@@ -99,5 +99,14 @@ eventCreate.addEventListener('click', eventDelete);
 overlay.addEventListener('click', eventDelete);
 
 btn.forEach( btn => {
-    btn.addEventListener('click', eventDelete, {once: true});
+    btn.addEventListener('click', eventDelete, false);
 });
+
+
+
+function GetEventType(event){
+    console.log(`${event.type}`);
+}
+
+document.addEventListener('keyup', GetEventType,{capture:true});
+document.addEventListener('keydown', GetEventType);
