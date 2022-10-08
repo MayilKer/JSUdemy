@@ -20,3 +20,14 @@ for (let node of document.body.childNodes){
 
     console.log(node);
 }
+
+var arcticle = document.getElementById('acticle');
+
+arcticle.dataset.current = 1;
+
+if(arcticle.dataset.current > 2){
+    console.log("True");
+}else{
+    console.log('false');
+}
+
