@@ -197,3 +197,17 @@ const fibV2 = n => {
 
 console.log(fibV2(1));
 
+function rev(){
+    let num = 0;
+    function call(){
+        num++;
+        console.log(num);
+    }
+    return call;
+}
+
+let zet = rev();
+
+let z1 = zet();
+let z2 = zet();
+let z3 = zet();
