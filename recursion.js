@@ -211,3 +211,19 @@ let zet = rev();
 let z1 = zet();
 let z2 = zet();
 let z3 = zet();
+
+
+console.log(Number.isNaN(8/0));
+console.log(isNaN(8/0));
+let arr = ['1'];
+let obj = {
+    a: 2
+};
+
+console.log(typeof(arr));
+console.log(typeof(obj));
+console.log(typeof(undefined));
+
+let a = 0;
+
+console.log(a ?? 12);
