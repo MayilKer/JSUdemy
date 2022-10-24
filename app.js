@@ -125,7 +125,7 @@ const set = new Set(forSet);
 set.add('alex')
    .add('Anna');
 
-// console.log(set);
+console.log(set);
 
 // set.delete();
 // set.has();
@@ -167,3 +167,15 @@ function amountOfPages(summary){
 
 
 console.log(amountOfPages(1095));
+
+console.log(0.1+0.3);
+
+let bigInt = 213213213123123123121212313122313213n;
+
+let sameBigInt = BigInt(312312312312123);
+
+console.log(typeof(sameBigInt));
+
+console.log(BigInt(1));
+
+console.log(Number.parseInt(bigInt));
