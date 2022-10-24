@@ -198,9 +198,9 @@ let salaries = {
     }
   };
 
-  for(let key in original){
-    console.log(original[key]);
-  }
+  // for(let key in original){
+  //   console.log(original[key]);
+  // }
 
   function clone(obj){
     let copyObj = {};
@@ -212,11 +212,20 @@ let salaries = {
   }
 
   let newobj = clone(original);
+  
+  let assignObj = Object.assign({}, original);
+  
 
   newobj.a = 177;
+  original.a = 10;
+  original.c.d = 14;
 
   console.log(original.a);
   console.log(newobj.a);
+  console.log(assignObj.a);
+  console.log(original.c.d);
+  console.log(newobj.c.d);
+  console.log(assignObj.c.d);
 
   let copyArr = [1,2,3,4,5];
 
