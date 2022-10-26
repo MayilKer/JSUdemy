@@ -179,3 +179,34 @@ console.log(typeof(sameBigInt));
 console.log(BigInt(1));
 
 console.log(Number.parseInt(bigInt));
+
+function isPangram(string) {
+    string = string.toLowerCase();
+    return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x){
+        return string.indexOf(x) !== -1;
+      });
+}
+
+console.log(isPangram('the quick brown fox jumps over the lazy dog'));
+
+
+let falling = [1,2,3,45,5];
+
+console.log(falling.indexOf(4225));
+
+let str = 'sdsdds';
+
+console.log(str.charCodeAt('w'));
+
+
+function deepCount(a){
+    let counter = a.length;
+    for (let i of a){
+        if(Array.isArray(i)){
+            counter += deepCount(i);
+        }
+    }
+    return counter;
+}
+
+console.log(deepCount(["1", 5, "3", ["10"]]));
