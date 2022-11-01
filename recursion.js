@@ -23,15 +23,15 @@ form.addEventListener('submit', Calculate);
 
 
 
-// function powRec(x, y){
-//     let res = 1;
+function powRec(x, y){
+    let res = 1;
     
-//     for(let i = 0; i < y; i++){
-//         res *= x;
-//     }
+    for(let i = 0; i < y; i++){
+        res *= x;
+    }
 
-//     return res;
-// }
+    return res;
+}
 
 function powRec(x, y){
     if(y === 1) {

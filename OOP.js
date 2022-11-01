@@ -127,7 +127,7 @@ function isOpen(prop) {
 
 console.log(isOpen(restorantData.openNow));
 
-function isAverageLunchPriceTrue(fDish, sDish, average) { debugger;
+function isAverageLunchPriceTrue(fDish, sDish, average) {
     if (parseInt(fDish.price,10) + (parseInt(sDish.price,10)) < parseInt(average,10)) {
         return 'Цена ниже средней';
     } else {
