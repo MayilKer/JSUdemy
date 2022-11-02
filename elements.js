@@ -110,3 +110,29 @@ function GetEventType(event){
 
 document.addEventListener('keyup', GetEventType,{capture:true});
 document.addEventListener('keydown', GetEventType);
+
+
+const blackBox = document.querySelector('.blackBox'),
+      btnBlack = document.querySelector('.btnBlack');
+
+console.log(blackBox);
+console.log(blackBox.clientHeight);
+console.log(blackBox.clientWidth);
+console.log(blackBox.offsetHeight);
+console.log(blackBox.offsetWidth);
+console.log(blackBox.scrollHeight);
+
+btnBlack.addEventListener('click', () => {
+    blackBox.style.height = blackBox.scrollHeight + 'px';
+    console.log(blackBox.scrollTop);
+});
+
+console.log(blackBox.getBoundingClientRect().top);
+ 
+const style = window.getComputedStyle(blackBox);
+
+console.log(style.backgroundColor);
+
+console.log(document.documentElement.scrollTop);
+window.scrollTo(0,200);
+window.scrollBy(0,200);

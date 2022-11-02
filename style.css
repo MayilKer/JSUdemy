@@ -52,3 +52,23 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.blackBox{
+    width: 200px;
+    margin: 0 auto;
+    height: 300px;
+    padding: 10px;
+    border: 10px solid black;
+    overflow: auto;
+}
+
+.btnBlack{
+    width: 100px;
+    height: 40px;
+    background-color: white !important;
+    color: blue !important;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
