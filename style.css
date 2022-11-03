@@ -72,3 +72,11 @@
     padding: 10px;
     cursor: pointer;
 }
+
+.boxNew{
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+}
