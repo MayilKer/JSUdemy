@@ -26,7 +26,16 @@ console.log(pro.exit());
 
 function Calculator(){
     this.read = function(){
-        let a = +prompt('first', '');
-        let b = +prompt('second', '');
+        this.a = +prompt('first', '');
+        this.b = +prompt('second', '');
+    };
+    this.calculate = function() {
+        alert(this.a + this.b);
     };
 }
+
+let calc = new Calculator();
+
+calc.read();
+
+calc.calculate();
