@@ -38,13 +38,42 @@ function User(name, id){
 const newUser = new User('Mayil', 23);
 ///
 
-function aboutYourself(surname){
-    console.log(`${this.name} ${surname}`);
-}
-
 const per = {
     name: 'Matilda'
 };
 
+function aboutYourself(surname){
+    console.log(`${this.name} ${surname}`);
+}
+
+
+
 aboutYourself.apply(per,['Semonovna']);
 aboutYourself.call(per,'Kerimova');
+
+// Ручная привязка this: call, apply, bind
+
+function count(num){
+    return this*num;
+}
+
+const double = count.bind(2);
+
+console.log(double(12));
+
+
+const objT = {
+    num: 2,
+    saynumber: function(){
+        const say = () =>{
+            console.log(this.num);
+        };
+        say();
+    }
+};
+
+objT.saynumber();
+
+const double2 = a => a*2;
+
+console.log(double2(2));

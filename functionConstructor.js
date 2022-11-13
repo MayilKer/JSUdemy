@@ -11,9 +11,13 @@ function User(name, id){
     };
 }
 
+
+
 User.prototype.exit = function() {
     return `user - ${this.name} has logged out`;
 };
+
+console.log(User.prototype);
 
 const noob = new User('Xeyrulla',1);
 const pro = new User('Mayil',2);
