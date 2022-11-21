@@ -33,3 +33,19 @@ const div = new ColoredRectangleWidthText(25, 10, 'Hello', "Yellow");
 
 div.showMyProps();
 console.log(div.calcArea());
+
+class Triangle{
+    constructor(prop){
+        this.height = prop.height;
+    }
+
+    calcArea(){
+        return this.height * 0.5;
+    }
+}
+
+const trio = new Triangle({
+    height: 20
+});
+
+console.log(trio.calcArea());
