@@ -276,6 +276,28 @@ function reverse(str) {
 
 console.log(reverse(someString));
 
+
+function reverseFive(str){
+  let arrStr = str.split(" ");
+  for(let i = 0; i< arrStr.length; i++){
+    if(arrStr[i].length >= 5){
+      arrStr[i] = arrStr[i].split("").reverse().join('');
+    }
+  }
+  return arrStr.join(' ');
+}
+
+console.log(reverseFive("Hey fellow warriors"));
+
+function revWor(str){
+  return str.split(' ').map(function(word){
+    return (word.length > 5) ? word.split("").reverse().join('') : word;
+  }).join(' ');
+}
+
+
+console.log(revWor("Hey fellow warriors"));
+
 const baseCurrencies = ['USD', 'EUR'];
 const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
